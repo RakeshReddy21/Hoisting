@@ -1,0 +1,85 @@
+Decleration and scopes
+
+block --> 
+{
+    //content in this called block
+}
+
+decleartion--> it can be done in 2ways 
+     
+     Global
+     local --> block and function
+
+var x=5;
+var y=6;
+var z=10;
+console.log(x,y,z); //accessible outside of block or function
+
+{
+    console.log(x,y,z); //accessible inside of block
+}
+
+function demo(){
+    z=25;
+    console.log(x,y,z); //accessible inside of function.
+}
+demo() 
+
+
+{
+    var x=5;
+    console.log(x)
+}
+
+console.log(x)// var can be use here as x=5 but let can't use here 
+// var is having global scope
+// let is not having global scope
+//const is not having global scope, it has block scope
+
+
+function demo(){
+    var x=20;
+    console.log(x);
+}
+console.log(x); 
+demo()
+
+// in function var is not having global scope in function same for let and const
+
+// all var, let and const will have function scope
+
+        global s   block s    function s
+
+var     yes        no           yes
+let     no         yes          yes
+const   no         yes          yes
+
+named function
+anonymus function
+arrow function
+function with parameters
+function with/without parameters
+scopes --> global, local(block,function)
+decleartion --> global, local function
+
+
+
+13/08/24 -- Tuesday 
+
+call back
+higher order
+
+hoisting
+named functions vs anonymus vs arrow 
+
+Hoisting:- 
+
+we can host 3 var let and const
+console.log(a);
+let a=20; // we cannot access the value
+var a=30; //declartion at top with undefined value
+const a=40; // we cannot access the value
+
+
+a named function is hoisted with its value
+a anonymus/variable function and also for arrow function is hoisted with undefined value
